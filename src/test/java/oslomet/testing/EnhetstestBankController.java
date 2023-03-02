@@ -241,5 +241,9 @@ public class EnhetstestBankController {
 
     }
 
+    @Test
+    public void endre_ikkeLoggetInn();
+        when(sjekk.)
+
 }
 
