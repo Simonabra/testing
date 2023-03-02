@@ -242,8 +242,48 @@ public class EnhetstestBankController {
     }
 
     @Test
-    public void endre_ikkeLoggetInn();
-        when(sjekk.)kk
+    public void registrerBetaling_LoggetInn(){
+        Transaksjon betaling = new Transaksjon();
+
+        when(sjekk.loggetInn()).thenReturn("01010110523");
+
+        String reslutat = bankController.registrerBetaling(betaling);
+
+        assertNull(reslutat);
+    };
+
+    @Test
+    public void registrerBetaling_ikkeLoggetInn(){
+        Transaksjon betaling = new Transaksjon();
+
+        when(sjekk.loggetInn()).thenReturn(null);
+
+        String reslutat = bankController.registrerBetaling(betaling);
+
+        assertNull(reslutat);
+    };
+
+    @Test
+    public void endre_ikkeLoggetInn(){
+        Kunde nyKunde = new Kunde();
+
+        when(sjekk.loggetInn()).thenReturn(null);
+
+        String reslutat = bankController.endre(nyKunde);
+
+        assertNull(reslutat);
+    };
+
+    @Test
+    public void endre_LoggetInn(){
+        Kunde nyKunde = new Kunde();
+
+        when(sjekk.loggetInn()).thenReturn(null);
+
+        String reslutat = bankController.endre(nyKunde);
+
+        assertNull(reslutat);
+    };
 
 }
 
