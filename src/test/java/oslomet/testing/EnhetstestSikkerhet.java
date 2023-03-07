@@ -22,10 +22,11 @@ import oslomet.testing.Sikkerhet.Sikkerhet;
 
         @Mock
         // denne skal Mock'es
-        private Sikkerhet sjekk;
+        private MockHttpSession session;
 
         @Test
         public void sjekkLoggInn(){
+        // arange
 
         }
 
