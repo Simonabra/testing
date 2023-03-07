@@ -5,6 +5,7 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.mock.web.MockHttpSession;
 import oslomet.testing.API.BankController;
 import oslomet.testing.DAL.BankRepository;
 import oslomet.testing.Sikkerhet.Sikkerhet;
