@@ -70,11 +70,10 @@ import static org.mockito.Mockito.*;
 
         @Test
         public void test_loggUt(){
-            //arrange
+            // arrange
             session.setAttribute("Innlogget", null);
             sikkerhetsController.loggUt();
-
-            //act
+            // act
             String resultat = sikkerhetsController.loggetInn();
 
             //assert
@@ -82,12 +81,20 @@ import static org.mockito.Mockito.*;
         }
 
         @Test
-        public void loggInnAdmin(){
+        public void test_loggInnAdmin(){
+            // arrange
+            session.setAttribute("Innlogget", "Admin");
+            // act
+            String resultat = sikkerhetsController.loggInnAdmin("Admin", "Admin");
 
+            // assert
+            assertEquals("Logget inn", resultat);
         }
 
         @Test
-        public void loggetInn(){
-
+        public void  test_loggetInn(){
+            session.setAttribute(null, null);
+            String resultat = sikkerhetsController.loggetInn();
+            assertNull(resultat);
         }
 }
