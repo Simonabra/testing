@@ -1,10 +1,13 @@
 -- Database: `Bank` DENNE MÅ VÆRE OPPRETTET FØR SCRIPTET KJØRES !!!
 --
-
 -- --------------------------------------------------------
 --
 -- Tabellstruktur for tabell `Konto`
 --
+DROP TABLE Konto IF EXISTS;
+DROP TABLE Kunde IF EXISTS;
+DROP TABLE Poststed IF EXISTS;
+DROP TABLE Transaksjon IF EXISTS;
 
 CREATE TABLE IF NOT EXISTS `Konto` (
                                        `Kontonummer` varchar(20) NOT NULL,
